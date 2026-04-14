@@ -4,7 +4,7 @@
 
 A barebones project template for getting started with [Phaser 4](https://github.com/photonstorm/phaser) using JavaScript.
 
-**Phaser Version:** `4.0.0 RC4`
+**Phaser Version:** `4.0.0`
 
 ## Requirements
 
