@@ -4,7 +4,7 @@
 
 A barebones project template for getting started with [Phaser 4](https://github.com/photonstorm/phaser) using JavaScript.
 
-**Phaser Version:** `4.0.0`
+**Phaser Version:** `4.1.0`
 
 ## Requirements
 
@@ -58,3 +58,41 @@ If you encounter any issues, please open a new [GitHub Issue](https://github.com
 ## Questions, Comments, and Suggestions
 
 If you have any questions, comments, or suggestions, please feel free to open a new [GitHub Discussion](https://github.com/devshareacademy/phaser-4-basic-js-template/discussions) on your project's repository.
+
+## Updating Phaser
+
+To update the Phaser library in this project, there are three main components that need to be synchronized:
+
+1.  **Documentation:** The Phaser version mentioned at the top of this `README.md`.
+2.  **Library Files:** `assets/js/phaser.js` and `assets/js/phaser.min.js`.
+3.  **Type Definitions:** `src/types/phaser.d.ts`.
+
+### Manual Update
+
+If you wish to update these files manually:
+
+1.  **Download JavaScript Files:** Fetch the desired version from the jsDelivr CDN:
+    - `https://cdn.jsdelivr.net/npm/phaser@VERSION/dist/phaser.js`
+    - `https://cdn.jsdelivr.net/npm/phaser@VERSION/dist/phaser.min.js`
+      _(Replace `VERSION` with the target version, e.g., `4.1.0`)_
+2.  **Download Type Definitions:** Fetch the `phaser.d.ts` file from the Phaser GitHub repository:
+    - `https://raw.githubusercontent.com/phaserjs/phaser/refs/tags/vVERSION/types/phaser.d.ts`
+3.  **Update README:** Manually update the version number in the `**Phaser Version:**` line at the top of this file.
+
+### Using the Update Script
+
+A convenience script is provided in the `scripts` folder to automate this process.
+
+**To list available Phaser versions (requires npm):**
+
+```bash
+./scripts/update-phaser.sh --list
+```
+
+**To update to a specific version:**
+
+```bash
+./scripts/update-phaser.sh 4.1.0
+```
+
+The script will automatically download the required files to their correct locations and update this README.
