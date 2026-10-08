@@ -1,23 +1,55 @@
-# Phaser 4 - Basic JS Template
+# Phaser 4 - Basic Node JS Template
 
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-A barebones project template for getting started with [Phaser 4](https://github.com/photonstorm/phaser) using JavaScript.
+Forked from the excellent project by [Scott Westover / Dev Share Academy.](https://github.com/devshareacademy/phaser-4-basic-js-template)
+
+A barebones, command line-oriented template for [Phaser 4](https://github.com/photonstorm/phaser) using JavaScript & Node.
 
 **Phaser Version:** `4.1.0`
 
 ## Requirements
 
+This template is intended to work without additional baggage of an NPM project. No more error messages about
+out of date packages, and installing the whole internet. All you really need is:
+
 - A modern web browser
 - A local web server
 
+To build the games, run command line tools and web servers, the below are required:
+
+- Command line
+- Editor
+- [Node.JS](https://nodejs.org/en/download)
+
+For node follow these command line instructions to install the NVM tool, then use that to install node:
+
+```shell
+# Checkout this template from GitHub
+git clone git@github.com:sarah-j-smith/phaser-4-basic-js-template.git my-cool-game
+
+# Download and install nvm, if you don't have it
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh | bash
+
+# If you installed nvm start a new shell, or do this instead of restarting the shell
+\. "$HOME/.nvm/nvm.sh"
+
+# change into the checked out template
+cd my-cool-game 
+
+# Download and install Node.js - this reads the nvmrc file to get the right version
+nvm use
+
+# Verify the Node.js version:
+node -v # Should print "v24.21.0".
+```
+
 ## Running Locally
 
-You need to run a local web server to see the game running. Here are a few options:
-
-- **Python:** If you have Python 3 installed, you can use the built-in http.server. From the root of the project, run: `python3 -m http.server 8080`. This will start a local web server on port 8080. Visit `http://localhost:8080/` in your browser to see the game.
-- **Node.js:** If you have Node.js installed, you can use the `http-server` npm package. From the root of the project, run: `npx http-server`. This will start a local web server on port 8080. Visit `http://localhost:8080/` to see the game.
-- **VS Code Extension:** If you use VS Code, you can install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension to run a local web server.
+```bash
+# This should install a local version of the node package live-server in npm's storage (not in the game)
+npx live-server
+```
 
 ## Writing Code
 
@@ -37,27 +69,11 @@ bash scripts/bundle.sh
 
 This will create a `dist` folder containing your game. The contents of this folder can then be uploaded to any static web hosting service. The script will exclude the `src/types` directory from the final bundle.
 
-## Customizing Template
-
-### VS Code Settings
-
-The `.vscode` folder contains recommended extensions and settings for this project. You can customize or remove these as you see fit.
+Since this template required Node.JS the script will use that to minify the project.
 
 ### Static Assets
 
 Any static assets like images or audio files should be placed in the `assets` folder. They can then be loaded into your game.
-
-## Changelog
-
-This project uses the [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) format. You can view the changelog here: [Changelog](CHANGELOG.md).
-
-## Issues
-
-If you encounter any issues, please open a new [GitHub Issue](https://github.com/devshareacademy/phaser-4-basic-js-template/issues) on your project's repository.
-
-## Questions, Comments, and Suggestions
-
-If you have any questions, comments, or suggestions, please feel free to open a new [GitHub Discussion](https://github.com/devshareacademy/phaser-4-basic-js-template/discussions) on your project's repository.
 
 ## Updating Phaser
 
