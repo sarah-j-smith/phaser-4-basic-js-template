@@ -1,4 +1,10 @@
-# Phaser 4 - Basic Node JS Template
+# Phaser 4 - Nav-Mesh Tests
+
+Uses:
+
+* https://github.com/mikewesthad/javascript-astar
+* https://github.com/mikewesthad/navmesh/tree/master
+
 
 ![License](https://img.shields.io/badge/license-MIT-green)
 
